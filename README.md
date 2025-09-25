@@ -1,5 +1,6 @@
 # token_auth
 
+- npm i
 - node app.js
 
 1. go to profile
