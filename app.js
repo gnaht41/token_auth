@@ -1,3 +1,6 @@
+// app.js
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -13,8 +16,11 @@ app.use(bodyParser.json());
 app.use('/api/auth', authRoutes);
 
 // Connect DB & Start server
-mongoose.connect('mongodb://127.0.0.1:27017/tokenAuthApp')
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/tokenAuthApp';
+const PORT = process.env.PORT || 3000;
+
+mongoose.connect(MONGODB_URI)
   .then(() => {
-    app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+    app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
   })
   .catch(err => console.error(err));
