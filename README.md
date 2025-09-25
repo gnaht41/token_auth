@@ -19,12 +19,10 @@
 ## Question: Modify code to make token expried?
 - Để hạn là 10s
 ![alt text](public/images/image-5.png)
-![alt text](public/images/image-6.png)
 
 - Khi hết hạn 
 ![alt text](public/images/image-7.png)
 
 - Gia hạn lên 30s
 ![alt text](public/images/image-8.png)
-![alt text](public/images/image-9.png)
 ![alt text](public/images/image-10.png)
